@@ -1,0 +1,22 @@
+﻿@model WebSite.Models.Paper
+
+@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "Login";
+}
+<div style="text-align:center">
+    @using (Html.BeginForm("LoginValidation", "Pavan", FormMethod.Post))
+    {
+        <label>UserName</label>
+        //<input type="text" />
+        @Html.TextBoxFor(m => m.UserName)
+        <br />
+        <label>Password</label>
+        @Html.PasswordFor(m => m.Password)
+        <br />
+        <h4>@ViewBag.x</h4>
+        <button type="submit">Login</button>
+    }
+</div>
